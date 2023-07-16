@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+*:focus,
+*::before:focus,
+*::after:focus {
+  outline: 1px solid gray;
+}
+
+body {
+  padding: 2em 5%;
+  font-size: 2rem;
+}
+
+input,
+button,
+li {
+  padding: 15px;
+  border: 0;
+}
+
+input {
+  border: 1px solid tomato;
+}
+
+button {
+  cursor: pointer;
+  background-color: tomato;
+  color: azure;
+}
