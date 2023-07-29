@@ -51,7 +51,7 @@ export default {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ todo: this.update }),
         };
-        fetch(`http://localhost:3000/api/todos/${id}`, requestOptions)
+        fetch(`api/todos/${id}`, requestOptions)
           .then((res) => res.json())
           .then((data) => (this.todos = data.todo));
         this.isEdit = false;

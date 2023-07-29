@@ -43,7 +43,7 @@ export default {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ todo: this.newItem }),
         };
-        fetch("http://localhost:3000/api/todos", requestOptions)
+        fetch("api/todos", requestOptions)
           .then((res) => res.json())
           .then((data) => (this.todos = data));
 
@@ -54,7 +54,7 @@ export default {
         //   body: JSON.stringify({ todo:  this.newItem}),
         // };
         // const res = await fetch(
-        //   "http://localhost:3000/api/todos",
+        //   "api/todos",
         //   requestOptions
         // );
         // this.todos = await res.json();
@@ -63,19 +63,19 @@ export default {
     },
 
     fetchTodos() {
-      fetch("http://localhost:3000/api/todos")
+      fetch("api/todos")
         .then((res) => res.json())
         .then((data) => (this.todos = data));
 
       //using fetch with async/await
       // this.todos = null;
-      // const res = await fetch("http://localhost:3000/api/todos");
+      // const res = await fetch("api/todos");
       // this.todos = await res.json();
     },
 
     delItem(id) {
       // this.todos = this.todos.filter((i) => i !== item);
-      fetch(`http://localhost:3000/api/todos/${id}`, { method: "DELETE" })
+      fetch(`api/todos/${id}`, { method: "DELETE" })
         .then((res) => res.json())
         .then((data) => (this.todos = data.todo));
     },
