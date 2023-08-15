@@ -9,8 +9,8 @@ import assetsRouter from "./assetsRouter.js";
 import mongoose from "mongoose";
 
 const port = process.env.PORT || 3000;
-const publicPath = path.join(path.resolve(), "public");
-const distPath = path.join(path.resolve(), "dist");
+const publicPath = path.join(path.resolve(), "public"); // public assets file path
+const distPath = path.join(path.resolve(), "dist"); // production assets file path
 
 const app = express();
 
